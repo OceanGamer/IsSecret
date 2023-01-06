@@ -65,7 +65,7 @@ function waitJoin() {
 function join(){
     let value = nameInput.value
     if (value != "") {
-        fetch("http://192.168.1.109:8080/join/" + value)
+        fetch("https://issecret-production.up.railway.app/join/" + value)
         .then(function (res) {
             if (res.ok) {
                 res.json()
@@ -100,7 +100,7 @@ function menupage() {
 }
 
 function createchat() {
-    fetch("http://192.168.1.109:8080/create/"+id)
+    fetch("https://issecret-production.up.railway.app/create/"+id)
         .then(function (res) {
             if (res.ok) {
                 res.json()
@@ -131,7 +131,7 @@ function lobbycreate() {
 function joinchat() {
     let value = codeInput.value
     if (value != "") {
-        fetch("http://192.168.1.109:8080/joinchat/"+value+"/"+id)
+        fetch("https://issecret-production.up.railway.app/joinchat/"+value+"/"+id)
         .then(function (res) {
         if (res.ok) {
             res.json()
@@ -154,7 +154,7 @@ function joinchat() {
 
 function deletechat() {
     clearInterval(intervalo)
-    fetch("http://192.168.1.109:8080/deletechat/"+chatid)
+    fetch("https://issecret-production.up.railway.app/deletechat/"+chatid)
     .then(function (res) {
         if (res.ok) {
             res.json()
@@ -167,7 +167,7 @@ function deletechat() {
 }
 
 function verifysesion() {
-    fetch("http://192.168.1.109:8080/verify/"+chatid)
+    fetch("https://issecret-production.up.railway.app/verify/"+chatid)
     .then(function (res) {
         if (res.ok) {
             res.json()
@@ -193,7 +193,7 @@ function startchat() {
     if (userid == "2") {
         finaluser = "1"
     }
-    fetch("http://192.168.1.109:8080/startchat/"+chatid+"/"+finaluser)
+    fetch("https://issecret-production.up.railway.app/startchat/"+chatid+"/"+finaluser)
     .then(function (res) {
         if (res.ok) {
             res.json()
@@ -237,7 +237,7 @@ function sendMensaje() {
     if (value == "") {
 
     } else {
-    fetch("http://192.168.1.109:8080/sendmensaje/" + chatid + "/" + userid,{
+    fetch("https://issecret-production.up.railway.app/sendmensaje/" + chatid + "/" + userid,{
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -270,7 +270,7 @@ function añadirmensaje(autor,mensaje) {
 }
 
 function getMensajes() {
-    fetch("http://192.168.1.109:8080/getchat/"+chatid+"/"+mensajeindex)
+    fetch("https://issecret-production.up.railway.app/getchat/"+chatid+"/"+mensajeindex)
     .then(function (res) {
         if (res.ok) {
             res.json()
