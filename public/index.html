@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>IsSecret</title>
+</head>
+<body>
+    <! Start screen section !>
+    <div class="loadingLogo" id="loadingH">
+        <div class="loadingLogo">
+            <img src="images/logo.png" alt="logo">
+            <h1>IsSecret</h1>
+        </div>
+    </div>
+    <footer><div class="loadingFooter" id="loadingF"><span>Made By Cesar Galindo</span></div></footer>
+
+    <! Loading screen section !>
+    <div class="loadingLogo" id="loadingC">
+        <div class="loadingLogo">
+            <img src="images/logo.png" alt="logo">
+            <p>Tu codigo de invitacion es: <span id="codezone"></span></p>
+            <p>Esperando que el otro usuario ingrese a la sala...</p>
+            <img src="images/loadinggif.gif" alt="loading" id="loading">
+            <button class="button" id="cb">Cancelar</button>
+        </div>
+    </div>
+    <div class="loadingLogo" id="loadingA">
+        <div class="loadingLogo">
+            <img src="images/logo.png" alt="logo">
+            <p>Esperando que el chat inicie...</p>
+            <img src="images/loadinggif.gif" alt="loading" id="loading">
+            <button class="button">Cancelar</button>
+        </div>
+    </div>
+
+    <! Anonimous perfil creation !>
+    <div class="all animateSplash" id="perfilcreate">
+        <section class="leftBar">
+            <div class="leftminibar">
+                <img src="images/logo.png" alt="avatar">
+                <button><span class="material-symbols-outlined">sunny</span></button>
+            </div>
+            <div class="perfilCreationBar">
+                <div><h2 class="text-center">Bienvenido a IsSecret</h2></div>
+                <div>
+                    <h2 class="text-center">Perfil anonimo</h2>
+                    <span>Crea un perfll anonimo para que puedas usar la app y hablar con otros usuarios</span>
+                    <div class="formbox">
+                        <p>Tu nickname</p>
+                        <p id="error"></p>
+                        <input required type="text" placeholder="Nickname" id="nameInput" value="">
+                        <p>Al darle en continuar estas aceptando los Terminos y Servicios</p>
+                        <button id="co">Continuar</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="presentationFather">
+            <div class="presentationText">
+                <img src="images/logo.png" alt="logo">
+                <p>
+                Bienvenido! esto es IsSecret <br> 
+                aqui podras chatear con personas de forma totalmente anonima <br>
+                <br>
+                *No se solicita registro alguno, solo un Nickname y una descripcion totalmente opcional<br>
+                *Todo el chat se eliminara cuando se termine la sesion o uno de los usuarios se salga del mismo<br>
+                *No se recopila ningun dato del usuario siendo totalmente anonimo<br>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <! Application !>
+    <div class="all" id="appMenu">
+        <! PC Menu !>
+        <section class="leftBar">
+            <div class="leftminibar">
+                <img src="images/logo.png" alt="avatar">
+                <button><span class="material-symbols-outlined">sunny</span></button>
+            </div>
+            <div class="perfilCreationBar">
+                <div><h2 class="text-center">IsSecret</h2></div>
+                <div class="text-center">
+                    <span>Chats</span>
+                    <div class="formbox">
+                        <p>Nuevo Chat</p>
+                        <p id="codeerror"></p>
+                        <p>Coloca un codigo de invitacion para iniciar un chat con otro usuario</p>
+                        <input type="text" placeholder="Codigo de invitacion" value="" id="codeInput">
+                        <p> </p>
+                        <button id="cj">Buscar</button>
+                        <p>o</p>
+                        <button id="cc">Crear un nuevo chat</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <! No Chat section !>
+        <section class="presentationFather" id="nochat">
+            <div class="presentationText">
+                <img src="images/logo.png" alt="logo">
+                <p>
+                Bienvenido! esto es IsSecret <br> 
+                aqui podras chatear con personas de forma totalmente anonima <br>
+                <br>
+                *No se solicita registro alguno, solo un Nickname<br>
+                *Todo el chat se eliminara cuando se termine la sesion o uno de los usuarios se salga del mismo<br>
+                *No se recopila ningun dato del usuario siendo totalmente anonimo<br>
+                </p>
+            </div>
+        </section>
+    </div>
+
+
+    <! Chat Object !>
+    <div class="all" id="chatop">
+        <section class="Menu menuchat" id="menu">
+            <button id="cm" style="background-color: rgba(220, 220, 220, 0); border: 0px;"><span class="material-symbols-outlined">arrow_back_ios_new</span></button>
+            <div class="text-center">
+                <span><br>Tu sesion de IsSecret</span>
+                <div class="formbox">
+                    <p>Cierra el chat y elimina todos los mensajes para ambos usuarios</p>
+                    <button id="cch">Cerrar Chat</button>
+                </div>
+            </div>
+        </section>
+        <div class="leftminibar">
+            <img src="images/logo.png" alt="avatar">
+            <button id="om"><span class="material-symbols-outlined">menu</span></button>
+            <button><span class="material-symbols-outlined">sunny</span></button>
+        </div>
+        <section class="chat" id="onchat">
+            <div class="infoDiv" id="infodiv">
+                <p>Chateando con: <span id="namenick">NickName</span></p>
+                <p>Descripcion: descripcion</p>
+            </div>
+            <div class="chatDiv" id="chatdiv">
+                <p class="text-center">---Inicio del Chat---</p>
+            </div>
+            <div class="inputzone">
+                <textarea type="text" placeholder="Escribe algo..." value="" rows="2" id="chatInput"></textarea>
+                <button id="em">enviar</button>
+            </div>
+        </section>
+    </div>
+
+    <! Notification !>
+    <div class="notification animationup" id="chatfinalizado">
+        <p>CHAT FINALIZADO!</p>
+        <p>Un usuario ha finalizado el chat</p>
+        <button class="button" id="noti">Continuar</button>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/closeno.js"></script>
+</body>
+</html>
