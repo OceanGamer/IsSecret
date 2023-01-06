@@ -123,7 +123,6 @@ function lobbycreate() {
     let codezone = document.getElementById("codezone")
     let codezonehidden = document.getElementById("codezonehidden")
     codezone.innerHTML = chatid
-    codezonehidden.value = chatid
     userid = "1"
     intervalo = setInterval(verifysesion, 100)
 }
